@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondPageFragment">
+
+    <LinearLayout
+        android:id="@+id/llDateFill"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/prev_btn">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="@dimen/primary_text_size"
+            android:layout_marginLeft="@dimen/spacing_normal"
+            android:layout_marginRight="@dimen/base_margin"
+            android:layout_marginTop="@dimen/base_margin"
+            android:textColor="@color/purple_700"
+            android:text="Date Fill" />
+
+        <EditText
+            android:id="@+id/tietDateYr"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginRight="@dimen/spacing_normal"
+            android:layout_marginTop="@dimen/base_margin"
+            android:layout_weight="1"
+            android:drawableStart="@drawable/ic_baseline_calendar_month_24"
+            android:gravity="center"
+            android:hint="Year"
+            android:imeOptions="actionDone"
+            android:inputType="none"/>
+
+        <EditText
+            android:id="@+id/tietDateMonth"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginRight="@dimen/spacing_normal"
+            android:layout_marginTop="@dimen/base_margin"
+            android:layout_weight="1"
+            android:drawableStart="@drawable/ic_baseline_calendar_month_24"
+            android:gravity="center"
+            android:hint="Month"
+            android:imeOptions="actionDone"
+            android:inputType="none"/>
+
+        <EditText
+            android:id="@+id/tietDateDay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginRight="@dimen/spacing_normal"
+            android:layout_marginTop="@dimen/base_margin"
+            android:layout_weight="1"
+            android:drawableStart="@drawable/ic_baseline_calendar_month_24"
+            android:gravity="center"
+            android:hint="Day"
+            android:imeOptions="actionDone"
+            android:inputType="none"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textSize="@dimen/primary_text_size"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/llDateFill"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/submit_btn"/>
+
+    <Button
+        android:id="@+id/submit_btn"
+        android:text="Submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/prev_btn"/>
+
+    <Button
+        android:id="@+id/prev_btn"
+        android:text="Previous"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/submit_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        style="?attr/materialButtonOutlinedStyle"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FirstPageFragment">
+
+    <LinearLayout
+        android:id="@+id/llDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/next_btn">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="@dimen/primary_text_size"
+            android:layout_marginLeft="@dimen/spacing_normal"
+            android:layout_marginRight="@dimen/base_margin"
+            android:layout_marginTop="@dimen/base_margin"
+            android:textColor="@color/purple_200"
+            android:text="Date Picker" />
+
+        <EditText
+            android:id="@+id/tietDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginRight="@dimen/spacing_normal"
+            android:layout_marginTop="@dimen/base_margin"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:drawableStart="@drawable/ic_baseline_calendar_month_24"
+            android:focusable="false"
+            android:gravity="center"
+            android:hint="Picker"
+            android:imeOptions="actionDone"
+            android:inputType="none"
+            android:text="-" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/next_btn"
+        android:text="Next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/llDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        style="?attr/materialButtonOutlinedStyle"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
